@@ -1,0 +1,82 @@
+.Card {
+	width: 300px;
+	height: 225px;
+	position: relative;
+	overflow: hidden;
+	border-radius: 20px;
+	box-shadow: 0 20px 40px rgba(0,0,0, 0.15);
+	display: grid;
+	grid-template-rows: 1fr 1fr;
+	transition: 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+	cursor: pointer;
+}
+
+.Card:hover {
+	transform: scale(1.1, 1.1);
+	box-shadow: 0 30px 60px rgba(0,0,0, 0.5);
+}
+
+.Card:hover img {
+	transform: translateY(-20px);
+}
+
+.Card img {
+	height: 110%;
+	position: absolute;
+	top: 0;
+	z-index: -1;
+	transition: 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.Card h3 {
+	color: white;
+	font-size: 30px;
+	margin: 20px 0 0 20px;
+	width: 190px;
+}
+
+.Card p {
+	color: rgba(255,255,255, 0.8);
+	text-transform: uppercase;
+	font-weight: 600;
+	font-size: 18px;
+	align-self: end;
+	margin: 0 0 20px 20px;
+}
+
+.CardGroup {
+  margin: 50px 40px 100px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 40px;
+  justify-items: center;
+}
+
+@media (max-width: 1060px) {
+  .CardGroup {
+	grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 720px) {
+  .CardGroup {
+	grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+.Cards h2 {
+  margin: 50px 20px;
+  font-size: 60px;
+  text-align: center;
+  font-weight: 700;
+  background: linear-gradient(104.74deg, #050A27 0%,#4A548C 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@media (max-width: 640px) {
+  .Cards h2 {
+	font-size: 30px;
+  }
+}
